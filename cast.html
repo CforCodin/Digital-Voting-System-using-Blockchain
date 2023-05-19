@@ -5,13 +5,15 @@
     
     <title>Cast your vote</title>
     <link rel="stylesheet" href="login.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script>
+
 </head>
-<body
+<body>
         <section>
             <div class="circle"></div>
             <div class="circles"></div>
             <header>
-                <a href="#" class="logo"><img src="india.png" width ="80px" height="80px"></a>
+                <a href="#" class="logo"><img src="india.png" width ="100px" height="80px"></a>
                 <ul>
                     <li>
                         <a href = "index.html">Home</a>
@@ -26,7 +28,7 @@
                         <a href = "cast.html">Cast a vote</a>
                     </li>
                     <li>
-                        <a href = "Home">View profile</a>
+                        <a href = "profile.html">View profile</a>
                     </li>
                 </ul>
             </header>
@@ -77,27 +79,28 @@
                                 <td><img src="bjp.png" width="50px" height="'50px"></td>
                                 <td>Narendra Modi</td>
                                 <td>B.J.P</td>
-                                <td><button>Vote</button></td>
+                                <td><input type="radio" name="Party">VOTE ME</td>
                                 </tr>
                                 <tr>
                                     <td><img src="aap.png" width="50px" height="'50px"></td>
                                     <td>Arindra Kejariwaal</td>
                                     <td>AAP</td>
-                                    <td><button>Vote</button></td>
+                                    <td><input type="radio" name="Party">VOTE ME</td>
                                     </tr>
                                     <tr>
                                         <td><img src="congress.jpeg" width="50px" height="'50px"></td>
                                         <td>Priyanka Gandhi</td>
                                         <td>Congress</td>
-                                        <td><button>Vote</button></td>
+                                        <td><input type="radio" name="Party">VOTE ME</td>
                                         </tr>
                                         <tr>
                                             <td><img src="bsp.jpg" width="50px" height="'50px"></td>
                                             <td>Maya Vati</td>
                                             <td>B.S.P</td>
-                                            <td><button>Vote</button></td>
+                                            <td><input type="radio" name="Party">VOTE ME</td>
                                             </tr>
                           </table>
+                          <button><a href="./voted.html">Submit</a></button>
                     </form>
                     
                 </div>

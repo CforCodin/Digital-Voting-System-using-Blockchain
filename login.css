@@ -57,6 +57,7 @@ header ul li a{
     transform: translate(-50%, -50%);
     margin-top: 15px;
     width: 400px;
+    
 
     background: #db7d12;
     border-radius: 10px;
@@ -65,6 +66,7 @@ header ul li a{
     text-align: center;
     padding: 0 0 20px 0;
     border-bottom:1px solid rgb(255, 255, 255);
+    margin-top:10px;
 }
 .center form{
     padding: 0 40px;
@@ -181,12 +183,26 @@ table{
     margin:7px;
     padding:5px;
 }
-table tr{
-    padding: 12px;
-}
 .cent
 {
     justify-content: center;
     align-self: center;
     display: flex;
+}
+.center h1{
+    color: #f1bdc9;
+}
+button{
+    position:relative;
+    left:100px;
+    padding:10px 22px ;
+    margin:6px;
+    background-color: #0fc41e;
+    color:#fff;
+    border-radius: 15px;
+    text-decoration: none;
+    border-color: #fff;
+}
+.hello{
+    font-size:22px;
 }

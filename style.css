@@ -53,6 +53,9 @@ header ul li a{
     margin-left:40px;
     font-weight: bold;
 }
+header ul li a:hover{
+    color:darkgreen;
+}
 .content
 {
     position: relative;

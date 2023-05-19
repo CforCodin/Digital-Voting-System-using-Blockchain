@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: chocolate;
+}
+
+.centt
+{
+    align-items: center;
+    justify-content:center;
+    display: flex;
+    width: 100%;
+    height:100vh;
+    margin:0;
+    padding:0;
+}
+p
+{
+    font-size: x-large;
+    color: antiquewhite;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+button{
+    
+    padding:10px;
+    margin:6px;
+    background-color: #0fc41e;
+    color:#fff;
+    border-radius: 40px;
+    text-decoration: none;
+    border-color: #fff;
+}

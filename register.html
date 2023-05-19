@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     
-    <title>Login Form</title>
+    <title>DVM India</title>
     <link rel="stylesheet" href="login.css">
+    
+    
+      
 </head>
+
+    
 <body>
         <section>
             <div class="circle"></div>
             <div class="circles"></div>
             <header>
-                <a href="#" class="logo"><img src="india.png" width ="80px" height="80px"></a>
+                <a href="#" class="logo"><img src="india.png" width ="100px" height="80px"></a>
                 <ul>
                     <li>
                         <a href = "index.html">Home</a>
@@ -34,9 +39,14 @@
                
                 <div class="center">
                     <h1>Verify your identity</h1>
-                    <form method="get">
+                    <form method="POST"
+                    id="form">
                         <div class="txt_field">
-                            <input type="text" name = "full-name" required>
+                            <input type="text" name = "full-name" required
+                            id="full-name"
+                            lists="full-names"/>
+                            <datalist id="full-names">
+                                </datalist>
                             <label>Full Name</label>
                         </div>
                         <div class="txt_field">
@@ -61,6 +71,62 @@
                            Please enter each and every information correctly <a href="#"></a>
                         </div>
                     </form>
+                    <script>
+                        const url = "https://script.google.com/macros/s/AKfycbyrB-jkhR1HVNbvFHsmi0nCdR-C82w7nDzyvS6Q235JxzXEA_hHbIuPKpLKFKSwTmH-Zg/exec" // enter your public ('access' - 'anyone') deployment URL (NOT test deployment!)
+                        document.getElementById('form').action = url;
+                
+                        // fetching the data from each column in the sheet
+                        // then populating the respective datalist
+                        fetch(`${url}?header=full-name`)
+                            .then((response) => response.json())
+                            .then(({ data }) => {
+                                console.log(data);
+                                populateDatalists("full-names", data)
+                            })
+                            .catch((error) => console.error('!!!!!!!!', error));
+                
+                        fetch(`${url}?header=phone`)
+                            .then((response) => response.json())
+                            .then(({ data }) => {
+                                console.log(data);
+                                populateDatalists("phones", data)
+                            })
+                            .catch((error) => console.error('!!!!!!!!', error));
+                        
+                        fetch(`${url}?header=email`)
+                            .then((response) => response.json())
+                            .then(({ data }) => {
+                                console.log(data);
+                                populateDatalists("emails", data)
+                            })
+                            .catch((error) => console.error('!!!!!!!!', error));
+
+                            
+                        fetch(`${url}?header=adhar`)
+                            .then((response) => response.json())
+                            .then(({ data }) => {
+                                console.log(data);
+                                populateDatalists("adhars", data)
+                            })
+                            .catch((error) => console.error('!!!!!!!!', error));   
+
+                        fetch(`${url}?header=voter-card`)
+                            .then((response) => response.json())
+                            .then(({ data }) => {
+                                console.log(data);
+                                populateDatalists("voter-cards", data)
+                            })
+                            .catch((error) => console.error('!!!!!!!!', error));
+                
+                        // function to add options to datalists
+                        const populateDatalists = (id, arr) => {
+                            let result = '';
+                            for (const item of arr) {
+                                result += `<option value="${item}">`;
+                            }
+                            document.getElementById(id).innerHTML = result;
+                        }
+                    </script>
                 </div>
             
                </div>
